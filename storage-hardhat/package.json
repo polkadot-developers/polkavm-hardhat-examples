@@ -8,13 +8,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "description": "",
   "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
-    "dotenv": "^16.4.7",
-    "hardhat": "^2.22.19",
-    "hardhat-resolc": "^0.0.7",
-    "hardhat-revive-node": "^0.0.6"
+    "@parity/hardhat-polkadot": "^0.1.5",
+    "dotenv": "^16.5.0",
+    "solc": "^0.8.28"
   }
 }

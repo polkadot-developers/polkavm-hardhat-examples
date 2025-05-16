@@ -1,24 +1,16 @@
-require('@nomicfoundation/hardhat-toolbox');
+        
+require("@nomicfoundation/hardhat-toolbox");
 
-require('hardhat-resolc');
-require('hardhat-revive-node');
+require("@parity/hardhat-polkadot");
 
-require('dotenv').config();
+require("dotenv").config();
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-  solidity: '0.8.28',
+  solidity: "0.8.28",
   resolc: {
-    compilerSource: 'binary',
-    settings: {
-      optimizer: {
-        enabled: true,
-        runs: 400,
-      },
-      evmVersion: 'istanbul',
-      compilerPath: 'INSERT_PATH_TO_RESOLC_COMPILER',
-      standardJson: true,
-    },
+    version: "1.5.2",
+    compilerSource: "npm",
   },
   networks: {
     hardhat: {

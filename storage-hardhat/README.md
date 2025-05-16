@@ -1,7 +1,6 @@
 # Storage Contract Implementation on PolkaVM
 
-This project demonstrates how to deploy, test, and interact with a simple storage contract on PolkaVM using Hardhat. For a comprehensive, step-by-step guide on this process, check out the [Test and Deploy with Hardhat](https://papermoonio.github.io/polkadot-mkdocs/tutorials/smart-contracts/launch-your-first-project/test-and-deploy-with-hardhat/
-) tutorial.
+This project demonstrates how to deploy, test, and interact with a simple storage contract on PolkaVM using Hardhat. For a comprehensive, step-by-step guide on this process, check out the [Test and Deploy with Hardhat](https://papermoonio.github.io/polkadot-mkdocs/tutorials/smart-contracts/launch-your-first-project/test-and-deploy-with-hardhat/) tutorial.
 
 ## Contract Overview
 
@@ -45,10 +44,6 @@ PRIVATE_KEY=your_private_key_here
 In the `hardhat.config.js` file, you need to replace the following placeholders with the appropriate paths:
 
 ```javascript
-compilerPath: 'INSERT_PATH_TO_RESOLC_COMPILER',
-```
-
-```javascript
 nodeBinaryPath: 'INSERT_PATH_TO_SUBSTRATE_NODE',
 ```
 
@@ -56,9 +51,7 @@ nodeBinaryPath: 'INSERT_PATH_TO_SUBSTRATE_NODE',
 adapterBinaryPath: 'INSERT_PATH_TO_ETH_RPC_ADAPTER',
 ```
 
-To configure the compiler binary, replace `INSERT_PATH_TO_RESOLC_COMPILER` with the correct path to the compiler binary. You'll need to install the latest release for your specific system from the [`revive` repository](https://github.com/paritytech/revive) and then install [`solc-select`](https://github.com/crytic/solc-select) to choose the specific version of the solidity compiler.
-
-To set up the `INSERT_PATH_TO_SUBSTRATE_NODE` and `INSERT_PATH_TO_ETH_RPC_ADAPTER` variables and run a local node for development and testing, follow the instructions on the [Deploying with a Local Node](https://papermoonio.github.io/polkadot-mkdocs/develop/smart-contracts/dev-environments/hardhat/#deploying-with-a-local-node) page.
+To set up the `INSERT_PATH_TO_SUBSTRATE_NODE` and `INSERT_PATH_TO_ETH_RPC_ADAPTER` variables and run a local node for development and testing, follow the instructions on the [Deploying with a Local Node](https://papermoonio.github.io/polkadot-mkdocs/develop/smart-contracts/dev-environments/hardhat/#testing-your-contract) page.
 
 ## Development Workflow
 
@@ -80,7 +73,7 @@ To deploy to a local development node:
 
 1. First, start a local node:
     ```bash
-    npx hardhat node-polkavm
+    npx hardhat node
     ```
 
 2. Then, in a new terminal window, deploy the contract:
@@ -90,7 +83,7 @@ To deploy to a local development node:
 
 To deploy to the Westend Asset Hub testnet:
 ```bash
-npx hardhat ignition deploy ./ignition/modules/StorageModule.js --network westendAssetHub
+npx hardhat ignition deploy ./ignition/modules/StorageModule.js --network westendHub
 ```
 
 ### Interact with the Contract
