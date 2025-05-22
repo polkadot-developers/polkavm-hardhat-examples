@@ -1,6 +1,6 @@
 # Sample Polkadot Hardhat Project
 
-This project demonstrates how to use Hardhat with Polkadot. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+This project demonstrates how to use precompiles in pallet revive. Each contract calls to one of the deployed precompiles contracts in Polkadot Hub, and shows how to use them.
 
 1) Compile the contract:
 
@@ -12,4 +12,10 @@ npx hardhat compile
 
 ```shell
 npx hardhat test
+```
+
+3) Run specifc test:
+
+```shell
+npx hardhat test test/TestName.js
 ```
