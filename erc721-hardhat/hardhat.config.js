@@ -1,32 +1,19 @@
-require('@nomicfoundation/hardhat-toolbox');
+require("@nomicfoundation/hardhat-toolbox");
+require("@parity/hardhat-polkadot");
 
-require('hardhat-resolc');
-require('hardhat-revive-node');
-
-require('dotenv').config();
+require("dotenv").config();
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-  solidity: '0.8.28',
+  solidity: "0.8.28",
   resolc: {
-    compilerSource: 'binary',
-    settings: {
-      optimizer: {
-        enabled: true,
-        runs: 400,
-      },
-      evmVersion: 'istanbul',
-      compilerPath: 'INSERT_PATH_TO_RESOLC_COMPILER',
-      standardJson: true,
-    },
+    compilerSource: "npm",
   },
   networks: {
     hardhat: {
       polkavm: true,
-      nodeConfig: {
-        nodeBinaryPath: 'INSERT_PATH_TO_SUBSTRATE_NODE',
-        rpcPort: 8000,
-        dev: true,
+      forking: {
+        url: "wss://westend-asset-hub-rpc.polkadot.io",
       },
       adapterConfig: {
         adapterBinaryPath: 'INSERT_PATH_TO_ETH_RPC_ADAPTER',
@@ -39,7 +26,7 @@ module.exports = {
     },
     westendAssetHub: {
       polkavm: true,
-      url: 'https://westend-asset-hub-eth-rpc.polkadot.io',
+      url: "https://westend-asset-hub-eth-rpc.polkadot.io",
       accounts: [process.env.PRIVATE_KEY],
     },
   },
