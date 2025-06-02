@@ -83,7 +83,7 @@ To deploy to a local development node:
 
 To deploy to the Westend Asset Hub testnet:
 ```bash
-npx hardhat ignition deploy ./ignition/modules/StorageModule.js --network westendHub
+npx hardhat ignition deploy ./ignition/modules/StorageModule.js --network passetHub
 ```
 
 ### Interact with the Contract
