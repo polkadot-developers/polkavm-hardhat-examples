@@ -10,6 +10,7 @@ This repository contains the following example projects:
 - [**erc721-hardhat**](./erc721-hardhat/) - implementation of an ERC-721 NFT contract using Hardhat
 - [**storage-hardhat**](./storage-hardhat/) - implementation of a simple storage contract using Hardhat
 - [**precompiles-hardhat**](./precompiles-hardhat/) - implementation of a contract that interacts with precompiled contracts using Hardhat
+- [**uniswap-v2-polkadot**](./uniswap-v2-polkadot/) - implementation of the Uniswap V2 codebase using `hardhat-polkadot`
 
 Each subfolder is a standalone Hardhat project with its own configuration, contracts, deployment scripts, and tests.
 
