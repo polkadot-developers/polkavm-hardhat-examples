@@ -15,13 +15,12 @@ module.exports = {
     hardhat: {
       polkavm: true,
       nodeConfig: {
-        // nodeBinaryPath: 'INSERT_PATH_TO_SUBSTRATE_NODE',
-        nodeBinaryPath: '/Users/nhussein11/Documents/workspace/papermoon/testing-hardhat-polkadot/bin/substrate-node',
+        nodeBinaryPath: 'INSERT_PATH_TO_SUBSTRATE_NODE',
         rpcPort: 8000,
         dev: true,
       },
       adapterConfig: {
-        adapterBinaryPath: '/Users/nhussein11/Documents/workspace/papermoon/testing-hardhat-polkadot/bin/eth-rpc',
+        adapterBinaryPath: 'INSERT_PATH_TO_ETH_RPC_ADAPTER',
         dev: true,
       },
     },
