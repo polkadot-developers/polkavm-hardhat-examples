@@ -13,5 +13,8 @@
     "@parity/hardhat-polkadot": "^0.1.5",
     "dotenv": "^16.5.0",
     "solc": "^0.8.28"
+  },
+  "dependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0"
   }
 }
