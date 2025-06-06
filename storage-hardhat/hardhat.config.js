@@ -1,9 +1,8 @@
-        
 require("@nomicfoundation/hardhat-toolbox");
 
 require("@parity/hardhat-polkadot");
 
-require("dotenv").config();
+const { vars } = require("hardhat/config");
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
@@ -16,12 +15,13 @@ module.exports = {
     hardhat: {
       polkavm: true,
       nodeConfig: {
-        nodeBinaryPath: 'INSERT_PATH_TO_SUBSTRATE_NODE',
+        // nodeBinaryPath: 'INSERT_PATH_TO_SUBSTRATE_NODE',
+        nodeBinaryPath: '/Users/nhussein11/Documents/workspace/papermoon/testing-hardhat-polkadot/bin/substrate-node',
         rpcPort: 8000,
         dev: true,
       },
       adapterConfig: {
-        adapterBinaryPath: 'INSERT_PATH_TO_ETH_RPC_ADAPTER',
+        adapterBinaryPath: '/Users/nhussein11/Documents/workspace/papermoon/testing-hardhat-polkadot/bin/eth-rpc',
         dev: true,
       },
     },
@@ -32,7 +32,7 @@ module.exports = {
     passetHub: {
       polkavm: true,
       url: 'https://testnet-passet-hub-eth-rpc.polkadot.io',
-      accounts: [process.env.PRIVATE_KEY],
+      accounts: [vars.get("PRIVATE_KEY")],
     },
   },
 };
