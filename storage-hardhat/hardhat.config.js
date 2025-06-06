@@ -1,9 +1,8 @@
-        
 require("@nomicfoundation/hardhat-toolbox");
 
 require("@parity/hardhat-polkadot");
 
-require("dotenv").config();
+const { vars } = require("hardhat/config");
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
@@ -32,7 +31,7 @@ module.exports = {
     passetHub: {
       polkavm: true,
       url: 'https://testnet-passet-hub-eth-rpc.polkadot.io',
-      accounts: [process.env.PRIVATE_KEY],
+      accounts: [vars.get("PRIVATE_KEY")],
     },
   },
 };

@@ -10,8 +10,7 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@parity/hardhat-polkadot": "^0.1.5",
-    "dotenv": "^16.5.0",
+    "@parity/hardhat-polkadot": "^0.1.6",
     "solc": "^0.8.28"
   },
   "dependencies": {
