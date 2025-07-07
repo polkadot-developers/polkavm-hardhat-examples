@@ -36,7 +36,7 @@ async function deploy() {
   if (networkName === "localNode") {
     privateKey = process.env.LOCAL_PRIV_KEY;
   }
-  if (networkName === "westendHub") {
+  if (networkName === "passetHub") {
     privateKey = process.env.AH_PRIV_KEY;
   }
   
