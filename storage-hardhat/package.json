@@ -10,10 +10,10 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@parity/hardhat-polkadot": "^0.1.6",
+    "@parity/hardhat-polkadot": "^0.1.9",
     "solc": "^0.8.28"
   },
   "dependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^5.0.0"
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0"
   }
 }
