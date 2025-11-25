@@ -11,7 +11,7 @@
   "description": "",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
-    "@parity/hardhat-polkadot": "^0.1.5",
+    "hardhat": "^2.22.4",
     "dotenv": "^16.5.0"
   }
 }

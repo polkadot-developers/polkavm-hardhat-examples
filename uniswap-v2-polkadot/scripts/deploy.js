@@ -32,13 +32,11 @@ async function deploy() {
   
   const pairArtifact = await hre.artifacts.readArtifact("UniswapV2Pair");
 
-  let privateKey;
-  if (networkName === "localNode") {
-    privateKey = process.env.LOCAL_PRIV_KEY;
+  const accountList = networkConfig.accounts || [];
+  if (!Array.isArray(accountList) || accountList.length === 0) {
+    throw new Error(`No accounts configured for network ${networkName}`);
   }
-  if (networkName === "passetHub") {
-    privateKey = process.env.AH_PRIV_KEY;
-  }
+  const privateKey = accountList[0];
   
   const wallet = new ethers.Wallet(privateKey, provider);
   
